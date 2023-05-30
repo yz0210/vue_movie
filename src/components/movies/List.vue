@@ -31,7 +31,10 @@
         <el-table-column label="语言" prop="language" width="55px"></el-table-column>
         <el-table-column label="上映时间" prop="startTime" width="90px">
           <template slot-scope="scope">
-            {{scope.row.startTime | dateFormat}}
+            {{
+
+              scope.row.startTime | dateFormat
+            }}
           </template>
         </el-table-column>
         <el-table-column label="时长/min" prop="timeLength" width="75px"></el-table-column>

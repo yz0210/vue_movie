@@ -16,6 +16,7 @@ import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
 import axios from './utils/request.js'
 
+
 import {dateFormat} from "@/utils";
 
 Vue.use(VueParticles)

@@ -1,10 +1,18 @@
-// const { defineConfig } = require('@vue/cli-service')
+const path = require('path') // 导入 node.js 中操作路径的模块
 module.exports = {
-  transpileDependencies: [],
   publicPath: './',
+
   devServer: {
-    progress: false,
-    host: '0.0.0.0',
-    port: 8082
+    port: 8082,
+    proxy: {
+      '/api': {
+        target: `http://124.70.71.210:8081/yz`,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    },
+    disableHostCheck: true
   }
 }
